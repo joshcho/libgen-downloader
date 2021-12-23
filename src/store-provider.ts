@@ -129,8 +129,8 @@ export const useStore = create<State>((set: SetState<State>): State => ({
           publisher: '',
           year: '',
           pages: '',
-          language: '',
-          extension: ''
+          language: 'english',
+          extension: 'pdf'
         }
     } })),
     config: (config: any) => set({ config: { ...config } }),
