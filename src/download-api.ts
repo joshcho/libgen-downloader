@@ -53,7 +53,8 @@ export const startDownloading = (
       parsedContentDisposition.parameters.filename = parsedContentDisposition.parameters.filename.substring(contLen - 100, contLen);
     }
 
-    const path: string = `./${parsedContentDisposition.parameters.filename}`;
+    // const path: string = `./${parsedContentDisposition.parameters.filename}`;
+    const path: string = `/home/pollock/Dropbox/pdfs/tmp.pdf`;
     const file: fs.WriteStream = fs.createWriteStream(path);
 
     const total: number = Number(downloadResponse?.headers.get('content-length') || 0);
